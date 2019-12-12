@@ -10,21 +10,26 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class application {
-
+public class Application 
+   {
 	private JFrame frame;
 	private JTextField textField;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
+	public static void main(String[] args)
+	    {
+		EventQueue.invokeLater(new Runnable() 
+		{
+			public void run()
+			 {
 				try {
-					application window = new application();
+					Application window = new Application();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
+				} 
+				catch (Exception e)
+				{
 					e.printStackTrace();
 				}
 			}
@@ -32,16 +37,18 @@ public class application {
 	}
 
 	/**
-	 * Create the application.
+	 * Create the Application.
 	 */
-	public application() {
+	public Application()
+	{
 		initialize();
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize()
+	     {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,8 +84,10 @@ public class application {
 		
 		
 		JButton btnToFahrenheit = new JButton("To Fahrenheit");
-		btnToFahrenheit.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		btnToFahrenheit.addActionListener(new ActionListener() 
+		    {
+			public void actionPerformed(ActionEvent arg0)
+			{
 				float t=Float.parseFloat(textField.getText());
 				float temp=(float)(t-273.15)*9/5+32;
 				String str=String.valueOf(temp);
