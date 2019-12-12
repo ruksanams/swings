@@ -12,8 +12,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
-public class calculator {
-
+public class Calculator 
+{
 public String Str1,Str2,Str3;
 public int f=0;
 public float RES;
@@ -54,14 +54,20 @@ private JLabel lblView;
 /**
 * Launch the application.
 */
-public static void main(String[] args) {
-EventQueue.invokeLater(new Runnable() {
-public void run() {
-try {
-calculator window = new calculator();
-window.frame.setVisible(true);
-} catch (Exception e) {
-e.printStackTrace();
+public static void main(String[] args) 
+{
+  EventQueue.invokeLater(new Runnable()
+  {
+public void run()
+{
+   try
+   {
+    calculator window = new calculator();
+    window.frame.setVisible(true);
+   } 
+  catch (Exception e)
+  {
+   e.printStackTrace();
 }
 }
 });
@@ -70,14 +76,16 @@ e.printStackTrace();
 /**
 * Create the application.
 */
-public calculator() {
+public calculator()
+{
 initialize();
 }
 
 /**
 * Initialize the contents of the frame.
 */
-private void initialize() {
+private void initialize()
+{
 frame = new JFrame();
 frame.setBounds(0, 11, 540, 298);
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -87,8 +95,10 @@ TF.setBounds(46, 36, 434, 47);
 frame.getContentPane().add(TF);
 TF.setColumns(10);
 sqrt = new JButton("Sqrt");
-sqrt.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent e) {
+sqrt.addActionListener(new ActionListener()
+{
+public void actionPerformed(ActionEvent e) 
+{
 Str1=TF.getText();
 double res1=Float.parseFloat(Str1);
 double re=Math.sqrt(res1);
@@ -102,8 +112,10 @@ sqrt.setBounds(10, 100, 89, 23);
 frame.getContentPane().add(sqrt);
 
 btnNewButton_1 = new JButton("1/X");
-btnNewButton_1.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent e) {
+btnNewButton_1.addActionListener(new ActionListener()
+{
+public void actionPerformed(ActionEvent e) 
+{
 Str1=TF.getText();
 double res1=Float.parseFloat(Str1);
 double re=1/res1;
@@ -114,7 +126,8 @@ df=0;
 }
 });
 btnNewButton_1.setBounds(109, 100, 89, 23);
-frame.getContentPane().add(btnNewButton_1);
+fram
+  e.getContentPane().add(btnNewButton_1);
 
 btnNewButton_2 = new JButton("Sin");
 btnNewButton_2.addActionListener(new ActionListener() {
@@ -130,8 +143,10 @@ btnNewButton_2.setBounds(208, 100, 89, 23);
 frame.getContentPane().add(btnNewButton_2);
 
 bt7 = new JButton("7");
-bt7.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent e) {
+bt7.addActionListener(new ActionListener()
+{
+public void actionPerformed(ActionEvent e) 
+{
 if(f==1)
 {
 TF.setText("");
@@ -144,8 +159,10 @@ bt7.setBounds(310, 100, 42, 23);
 frame.getContentPane().add(bt7);
 
 bt8 = new JButton("8");
-bt8.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent e) {
+bt8.addActionListener(new ActionListener()
+{
+public void actionPerformed(ActionEvent e)
+{
 if(f==1)
 {
 TF.setText("");
@@ -158,8 +175,10 @@ bt8.setBounds(362, 100, 42, 23);
 frame.getContentPane().add(bt8);
 
 bt9 = new JButton("9");
-bt9.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent e) {
+bt9.addActionListener(new ActionListener()
+{
+public void actionPerformed(ActionEvent e) 
+{
 if(f==1)
 {
 TF.setText("");
@@ -172,8 +191,10 @@ bt9.setBounds(415, 100, 42, 23);
 frame.getContentPane().add(bt9);
 
 div = new JButton("/");
-div.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent e) {
+div.addActionListener(new ActionListener() 
+{
+public void actionPerformed(ActionEvent e) 
+{
 Str1=TF.getText();
 TF.setText("");
 Str2=div.getText();
@@ -184,9 +205,12 @@ div.setBounds(467, 100, 42, 23);
 frame.getContentPane().add(div);
 
 mul = new JButton("*");
-mul.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent e) {
+mul.addActionListener(new ActionListener() 
+{
+public void actionPerformed(ActionEvent e) 
+{
 Str1=TF.getText();
+  
 TF.setText("");
 Str2=mul.getText();
 df=0;
@@ -196,8 +220,10 @@ mul.setBounds(467, 138, 42, 23);
 frame.getContentPane().add(mul);
 
 sub = new JButton("-");
-sub.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent e) {
+sub.addActionListener(new ActionListener() 
+{
+public void actionPerformed(ActionEvent e) 
+{
 Str1=TF.getText();
 TF.setText("");
 Str2=sub.getText();
